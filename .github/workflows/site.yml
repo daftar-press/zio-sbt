@@ -60,6 +60,12 @@ jobs:
         git commit -m "update readme." || echo "No changes to commit"
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
+      with:
+        title: "Update README.md"
+        commit-message: "update readme"
+        branch: update-readme
+        body: changes after running `sbt docs/generateReadme` command.
+        labels: auto-merge
 #    - name: Push Changes
 #      uses: ad-m/github-push-action@master
 #      with:

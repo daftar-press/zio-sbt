@@ -63,8 +63,7 @@ jobs:
       with:
         title: Update README.md
         commit-message: Update README.md
-        branch: update-readme
-        branch-suffix: short-commit-hash
+        branch: zio-sbt/update-readme
         body: |
           Changes after running the `sbt docs/generateReadme` command.
           

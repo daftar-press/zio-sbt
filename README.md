@@ -14,13 +14,10 @@ Project Stage | CI | Release | Snapshot | Discord | Github |
 
 ## Installation
 
-
-
-
 Add the following lines to your `plugin.sbt` fil:
 
 ```scala
-addSbtPlugin("dev.zio" % "zio-sbt-website" % "0.0.0+126-42b947d7-SNAPSHOT")
+addSbtPlugin("dev.zio" % "zio-sbt-website" % "0.0.0+131-7f509355-SNAPSHOT")
 ```
 
 Then you can enable it by using the following code in your `build.sbt` file:

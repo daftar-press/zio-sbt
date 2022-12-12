@@ -14,6 +14,9 @@ Project Stage | CI | Release | Snapshot | Discord | Github |
 
 ## Installation
 
+
+
+
 Add the following lines to your `plugin.sbt` fil:
 
 ```scala

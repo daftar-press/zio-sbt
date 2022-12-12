@@ -57,13 +57,14 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add README.md
-        git commit -m "update readme." || echo "No changes to commit"
+        git commit -m "Update README.md" || echo "No changes to commit"
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       with:
         title: Update README.md
         commit-message: Update README.md
         branch: update-readme
+        branch-suffix: short-commit-hash
         body: |
           Changes after running the `sbt docs/generateReadme` command.
           I will automatically update the README.md file whenever you have new changes for README.md, e.g.:

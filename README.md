@@ -33,6 +33,8 @@ Then you can enable it by using the following code in your `build.sbt` file:
 enablePlugins(WebsitePlugin)
 ```
 
+
+
 ## ZIO SBT Website
 
 ZIO SBT Website is an SBT plugin that has the following tasks:

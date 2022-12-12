@@ -251,14 +251,23 @@ object WebsiteUtils {
                   run = Some("""|git config --local user.email "github-actions[bot]@users.noreply.github.com"
                                 |git config --local user.name "github-actions[bot]"
                                 |git add README.md
-                                |git commit -m "update readme." || echo "No changes to commit"
+                                |git commit -m "Update README.md" || echo "No changes to commit"
                                 |""".stripMargin)
                 ),
                 Step.SingleStep(
-                  name = "Push Changes",
-                  uses = Some(ActionRef("ad-m/github-push-action@master")),
+                  name = "Create Pull Request",
+                  uses = Some(ActionRef("peter-evans/create-pull-request@v4")),
                   parameters = Map(
-                    "branch" -> "${{ github.head_ref }}".asJson
+                    "title"          -> "Update README.md".asJson,
+                    "commit-message" -> "Update README.md".asJson,
+                    "branch"         -> "update-readme".asJson,
+                    "body" ->
+                      """|Changes after running the `sbt docs/generateReadme` command.
+                         |
+                         |I will automatically update the README.md file whenever you have new changes for README.md, e.g.
+                         |  - After each release, I will update the version in the installation section.
+                         |  - After any changes to the "docs/index.md" file, I will update the README.md file accordingly.
+                         |""".stripMargin.asJson
                   )
                 )
               )

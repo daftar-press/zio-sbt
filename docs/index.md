@@ -23,6 +23,9 @@ enablePlugins(WebsitePlugin)
 
 ## ZIO SBT Website
 
+
+
+
 ZIO SBT Website is an SBT plugin that has the following tasks:
 
 - `sbt compileDocs`— compile documentation inside `docs` directory. The compilation result will be inside `website/docs` directory.

@@ -19,6 +19,8 @@ Project Stage | CI | Release | Snapshot | Discord | Github |
 
 Add the following lines to your `plugin.sbt` fil:
 
+
+
 ```scala
 addSbtPlugin("dev.zio" % "zio-sbt-website" % "0.1.5")
 ```

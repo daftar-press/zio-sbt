@@ -64,11 +64,4 @@ jobs:
         title: "Update README.md"
         commit-message: "update readme"
         branch: update-readme
-        body: changes after running `sbt docs/generateReadme` command.
-        labels: auto-merge
-#    - name: Push Changes
-#      uses: ad-m/github-push-action@master
-#      with:
-#        github_token: ${{ secrets.GITHUB_TOKEN }}
-#        branch: ${{ github.head_ref }}
-
+        body: Changes after running `sbt docs/generateReadme` command.

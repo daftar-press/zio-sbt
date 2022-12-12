@@ -14,9 +14,6 @@ Project Stage | CI | Release | Snapshot | Discord | Github |
 
 ## Installation
 
-
-
-
 Add the following lines to your `plugin.sbt` fil:
 
 ```scala
@@ -30,6 +27,9 @@ enablePlugins(WebsitePlugin)
 ```
 
 ## ZIO SBT Website
+
+
+
 
 ZIO SBT Website is an SBT plugin that has the following tasks:
 

@@ -61,7 +61,11 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       with:
-        title: "Update README.md"
-        commit-message: "update readme"
+        title: Update README.md
+        commit-message: Update README.md
         branch: update-readme
-        body: Changes after running `sbt docs/generateReadme` command.
+        body: |
+          Changes after running the `sbt docs/generateReadme` command.
+          I will automatically update the README.md file whenever you have new changes for README.md, e.g.:
+            - After each release, I will update the version in the installation section.
+            - After any changes to the "docs/index.md" file, I will update the README.md file accordingly.
